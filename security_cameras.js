@@ -2,8 +2,8 @@ ymaps.ready(['Heatmap']).then(function init() {
     var obj = json;
 
     var myMap = new ymaps.Map('map', {
-        center: [53.2833, 69.4],
-        zoom: 11,
+        center: [53.273684, 69.384049],
+        zoom: 14,
         controls: []
     });
 
@@ -13,13 +13,13 @@ ymaps.ready(['Heatmap']).then(function init() {
     }
     var heatmap = new ymaps.Heatmap(data, {
         // Радиус влияния.
-        radius: 15,
+        radius: 20,
         // Нужно ли уменьшать пиксельный размер точек при уменьшении зума. False - не нужно.
         dissipating: false,
         // Прозрачность тепловой карты.
-        opacity: 0.8,
+        opacity: 0.6,
         // Прозрачность у медианной по весу точки.
-        intensityOfMidpoint: 0.2,
+        intensityOfMidpoint: 0.5,
         // JSON описание градиента.
         gradient: {
             0.1: 'rgba(128, 255, 0, 0.7)',
